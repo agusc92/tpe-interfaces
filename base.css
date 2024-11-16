@@ -1,0 +1,144 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pixelify+Sans:wght@400..700&display=swap'); */
+body{
+    
+}
+/* color gris #384861 */
+/* color verde fuerte #58C890 */
+header{
+    max-width: 1024px;
+    border: 1px dashed green;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    img{
+        border-radius: 50%;
+        margin-left: 30px;
+    }
+    ul{
+        /* border: 1px dashed brown; */
+        padding-bottom:20px ;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        
+        li{
+            margin-left: 15px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            
+            a{
+                font-family: "kanit";
+                text-decoration: none;
+                color: #384861;
+                cursor: pointer;
+            }
+            a:hover{
+                color: #58C890;
+            }
+        }
+        button{
+            all: unset;
+            font-family: "kanit";
+            color: #384861;
+            background-color: #58C890;
+           padding: 7px 12px 7px 12px;
+            border-radius: 30px;
+            border-color: #58C890;
+            cursor: pointer;
+            
+        }
+    }
+    .contenedor-logo{
+        /* border: 1px dashed black; */
+    }
+    .contenedor-nav{
+        /* border: 1px dashed blue; */
+    }   
+}
+
+main{
+    max-width: 1024px;
+
+}
+
+footer{
+    font-family: "kanit";
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 1024px;
+    background-color: #58C890;
+    color: #384861;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    .img-logo{
+        border-radius: 50%;
+        margin-left: 30px;
+    }
+    ul{
+        all: unset;
+        list-style-type: none;
+
+    }
+    li{
+        display: flex;
+        align-items: center;
+
+        margin-top: 5px;
+        a{
+            font-family: "kanit";
+            text-decoration: none;
+            color: #384861;
+            cursor: pointer;
+        }
+    }
+    .menu{
+        
+        li{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contacto{
+        li{
+
+        }
+        img{
+            margin: 0;
+            margin-right: 5px;
+            height: 27px;
+            width: 25px;
+        }
+    }
+
+    .seguinos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            margin: 0;
+            margin-right: 5px;
+            height: 27px;
+            width: 25px;
+        }
+        margin-right: 50px;
+        .redes{
+            a{
+                margin-left:10px ;
+                margin-top: 30px;
+            }
+        }
+    }
+    .titulo-footer{
+        justify-content: center;
+    }
+}
+
+
+
