@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/conocelos.css">
+    <!-- fuente kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login desaparecer">
+        <span class="titulo">Iniciar sesion</span>
+        <label for="usuario">
+            <span>usuario</span>
+             <span class="imagen-input"><img src="./imagenes/usuario.png" alt="" id="imagenUsuarioInput" class="img"><input type="text" id="usuario" placeholder="usuario"></span>
+        </label> 
+        <span class="error-usuario" id="errorUsuario"></span>      
+        <label for="contrasenia">
+            <span>Contraseña</span>
+             <span class="imagen-input"><img src="./imagenes/candado.png" alt="" id="imagencontraseniaInput" class="img"><input type="text" id="contrasenia" placeholder="Contraseña"></span>
+             
+        </label>
+        <span class="error-usuario" id="errorContrasenia"></span> 
+        <button id="botonCerrarLogin">INGRESAR</button>
+    </div>
+    <button class="boton-login " id="boton-ingresar">INGRESAR</button>
+    <button class="boton-login logueado desaparecer" id="boton-ingresado"><img src="./imagenes/usuario.png" class="img-logueado" alt=""><span>Agustin</span></button>
+    <header>
+        <div class="contenedor-logo">
+            <img  src="./imagenes/logo.jpg" alt="logo">
+        </div>
+        <div class="contenedor-nav">
+            <ul>
+                <li><a href="">NOSOTROS</a></li>
+                <li><a href="">ADOPTA</a></li>
+                <li><a href="">DONACIONES</a></li>
+                <li><a href="">PARTICIPA</a></li>
+                <li><button id="botonDonar">DONA AHORA</button></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="contenedor">
+            <div class="portada">
+                <img src="./imagenes/photo_2024-11-17_11-59-07.jpg" alt="">
+                <span>CONOCELOS</span>
+            </div>
+            
+            <div class="contenedor-cards">
+                
+
+                    <span>CONOCELOS</span>
+                
+                <div></div>
+                <div class="botones">
+                    <button class="desaparecer" id="botonAgregar">Agregar</button>
+                    <select name="" id="">
+                        <option value="" disabled selected>Buscar por edad</option>
+                        <option value="1">Cachorro</option>
+                        <option value="2">joven</option>
+                        <option value="3">Adulto</option>
+                        <option value="4">Abuelo</option>
+                    </select>
+                </div>
+                <div class="card"
+                    data-nombre="Laurel"
+                    data-tamanio="mediano"
+                    data-edad="9 Años"
+                    data-castrado="Si"
+                    data-observaciones="ninguna"
+                    data-imagen="./imagenes/perritos/laurel.jpg"
+                >
+                <div class="actions desaparecer">
+                    <div class="circle delete" title="Eliminar">✖</div>
+                    <div class="circle edit" title="Editar">✎</div>
+                </div>
+                    <img src="./imagenes/perritos/laurel.jpg" alt="">
+                    <span>Laurel</span>
+                </div>
+
+                <div class="card"
+                    data-nombre="Charly"
+                    data-tamanio="mediano"
+                    data-edad="4 Años"
+                    data-castrado="Si"
+                    data-observaciones="rescatado de la calle"
+                    data-imagen="./imagenes/perritos/charly.jpg"
+                >
+                <div class="actions desaparecer">
+                    <div class="circle delete" title="Eliminar">✖</div>
+                    <div class="circle edit" title="Editar">✎</div>
+                </div>
+                    <img src="./imagenes/perritos/charly.jpg" alt="">
+                    <span>Charly</span>
+                </div>
+                <div class="card"
+                data-nombre="Vitto"
+                data-tamanio="pequeño"
+                data-edad="7 Años"
+                data-castrado="Si"
+                data-observaciones="posee una leion en su cadera que le impide caminar"
+                data-imagen="./imagenes/perritos/vitto.jpg"
+                >
+                <div class="actions desaparecer">
+                    <!-- <div class="circle delete" title="Eliminar"><img src="./imagenes/basura.png" alt="" class="imagen-accion"></div> -->
+                    <!-- <div class="circle edit" title="Editar"><img src="./imagenes/lapiz.png" alt=""class="imagen-accion"></div> -->
+                    <div class="circle delete" title="Eliminar">✖</div>
+                    <div class="circle edit" title="Editar">✎</div>
+                </div>
+                    <img src="./imagenes/perritos/vitto.jpg" alt="">
+                    <span>Vitto</span>
+                </div>
+
+                <div class="card"
+                data-nombre="Rihana"
+                data-tamanio="mediano"
+                data-edad="2 Años"
+                data-castrado="No"
+                data-observaciones="ninguna"
+                data-imagen="./imagenes/perritos/rihana.jpg"
+                >
+                <div class="actions desaparecer">
+                    <div class="circle delete" title="Eliminar">✖</div>
+                    <div class="circle edit" title="Editar">✎</div>
+                </div>
+                    <img src="./imagenes/perritos/rihana.jpg" alt="">
+                    <span>Rihana</span>
+                </div>
+
+                <div class="card"
+                data-nombre="Kiara"
+                data-tamanio="pequeño"
+                data-edad="5 meses"
+                data-castrado="No"
+                data-observaciones="usted debe comprometerse a castrarlo y aplicarle las vacunas faltantes, cuando llegue el momento"
+                data-imagen="./imagenes/perritos/kiara.jpg"
+                >
+                <div class="actions desaparecer">
+                    <div class="circle delete" title="Eliminar">✖</div>
+                    <div class="circle edit" title="Editar">✎</div>
+                </div>
+                    <img src="./imagenes/perritos/kiara.jpg" alt="">
+                    <span>Kiara</span>
+                </div>
+
+                <div class="card"
+                data-nombre="Connie"
+                data-tamanio="grande"
+                data-edad="4 Años"
+                data-castrado="Si"
+                data-observaciones="Ninguna"
+                data-imagen="./imagenes/perritos/connie.jpg"
+                >
+                <div class="actions desaparecer">
+                    <div class="circle delete" title="Eliminar">✖</div>
+                    <div class="circle edit" title="Editar">✎</div>
+                </div>
+                    <img src="./imagenes/perritos/connie.jpg" alt="">
+                    <span>Connie</span>
+                </div>
+
+                <div class="card"
+                data-nombre="Pepa"
+                data-tamanio="Pequeña"
+                data-edad="9 Meses"
+                data-castrado="Si"
+                data-observaciones="Abandonada por mudanza, le encanta jugar con la pelota"
+                data-imagen="./imagenes/perritos/pepa.jpg"
+                >
+                <div class="actions desaparecer">
+                    <div class="circle delete" title="Eliminar">✖</div>
+                    <div class="circle edit" title="Editar">✎</div>
+                </div>
+                    <img src="./imagenes/perritos/pepa.jpg" alt="">
+                    <span>Pepa</span>
+                </div>
+
+                <div class="card"
+                data-nombre="Danna"
+                data-tamanio="Pequeña"
+                data-edad="3 Meses"
+                data-castrado="No"
+                data-observaciones="usted debe comprometerse a castrarlo y aplicarle las vacunas faltantes, cuando llegue el momento"
+                data-imagen="./imagenes/perritos/danna.jpg"
+                >
+                <div class="actions desaparecer">
+                    <div class="circle delete" title="Eliminar">✖</div>
+                    <div class="circle edit" title="Editar">✎</div>
+                </div>
+                    <img src="./imagenes/perritos/danna.jpg" alt="">
+                    <span>Danna</span>
+                </div>
+
+                <div class="card"
+                data-nombre="Kato"
+                data-tamanio="grande"
+                data-edad="2 Años"
+                data-castrado="Si"
+                data-observaciones="Amoroso con los humanos pero no se lleva bien con otros animales"
+                data-imagen="./imagenes/perritos/kato.jpg"
+                >
+                <div class="actions desaparecer">
+                    <div class="circle delete" title="Eliminar">✖</div>
+                    <div class="circle edit" title="Editar">✎</div>
+                </div>
+                    <img src="./imagenes/perritos/kato.jpg" alt="">
+                    <span>Kato</span>
+                </div>
+                <div class="paginado">
+                    <span>&lt; Anterior </span>
+                    <span class="actual">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>siguiente &gt;</span>
+                </div>
+            </div>
+        </div>
+        <div id="fondoFalso" class="fondoFalso desaparecer"></div>
+    </main>
+    <div class="perro-popup desaparecer">
+        <img id="imagen" src="" alt="">
+        <div>
+            <span id="nombre" class="titulo">Vitto</span>
+            <span><STrong>Edad:</STrong> <span id="edad"></span></span>
+            <span><STrong>Tamaño:</STrong> <span id="tamanio"></span></span>
+            <span><STrong>Castrado:</STrong> <span id="castrado"></span> </span>
+            <span><STrong>observaciones: </STrong><span id="observaciones"></span></span>
+            <button id="cerrar">CERRAR</button>
+        </div>
+
+    </div>
+    <footer>
+        <img class="img-logo" src="./imagenes/logo.jpg" alt="">
+        <div class="menu">
+            <ul>
+                <li><a href="">NOSOTROS</a></li>
+                <li><a href="">ADOPTA</a></li>
+                <li><a href="">DONACIONES</a></li>
+                <li><a href="">PARTICIPA</a></li>
+            </ul>
+        </div>
+        <div class="contacto">
+            <ul>
+                <li class="titulo-footer">  <a href="">CONTACTO</a></li>
+                <li><img src="./imagenes/ubicacion.png" alt=""><a href="https://maps.app.goo.gl/1cEpuP5ujK4BGo7M6" target="_blank">Necochea, Calles 107 y 66</a></li>
+                <li><img src="./imagenes/telefono.png" alt="">(02262) 42-7782</li>
+                <li><img src="./imagenes/email.png" alt="">caannecochea@outlook.com</li>
+            </ul>
+        </div>
+        <div class="seguinos">
+            <ul>
+                <li class="titulo-footer"><span>SEGUINOS</span></li>
+                <li class="redes">
+                    <a href="https://www.facebook.com/caan.necochea?locale=es_LA" target="_blank"><img src="./imagenes/faceboock.png" alt="" ></a>
+                    <a href="https://www.instagram.com/caanecochea/" target="_blank"><img src="./imagenes/instagram.png" alt=""></a>
+                    <a href=""><img src="./imagenes/whatsapp.png" alt="" target="_blank"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./scripts/conocelos.js"></script>
+</body>
+</html>

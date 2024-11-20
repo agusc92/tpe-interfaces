@@ -1,0 +1,98 @@
+.portada{
+    height: 300px;
+    width: 100%;
+}
+.titulo-dona{
+    position: absolute;
+    top: 380px;
+    left: 100px;
+}
+.intro{
+    font-family: "kanit";
+    font-size: 20px;
+    font-weight: normal;
+    padding: 0 100px 0 100px;
+}
+
+.modo-pago{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border-radius: 20px;
+    border: 2px solid #384861;
+    height: 400px;
+    width: 340px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 50px 0 50px;
+}
+.tipo-donaciones{
+    display: flex;
+    justify-content: space-around;
+    background-color: #EEFFF1;
+    padding: 50px 200px 50px 200px;
+    
+    .mercado-pago{
+        img{
+            width: 300px;
+            margin-bottom: 50px;
+        }
+        button{
+            all: unset;
+            align-self: center;
+            font-size: 16px;
+            width:fit-content;
+            font-family: "kanit";
+            font-weight: 500;
+            color: #384861;
+            background-color: #58C890;
+           padding: 7px 18px 7px 18px;
+            border-radius: 30px;
+            border-color: #58C890;
+            cursor: pointer;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .boton-grande{
+            width: 70%;
+        }
+        div{
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+        }
+    }
+
+    .banco-provincia{
+        font-weight: bold;
+        font-size: 24px;
+        .subtitulo{
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 16px;
+            font-weight: normal;
+            margin: 10px;
+        }
+
+    }
+}
+.insumos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    
+}
+.donacion-insumos{
+    align-self: center;
+    margin-top: 20px;
+    font-family: "kanit";
+    width: 700px;
+    height: fit-content;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+.titulo-insumos{
+    margin-left: 100px;
+}

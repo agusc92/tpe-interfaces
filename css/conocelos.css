@@ -1,0 +1,311 @@
+body{
+   all:unset;
+   
+}
+.contenedor{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.portada{
+    span{
+        top: 400PX;
+        left: 100PX;
+        position:absolute;
+        z-index: 1;
+    }
+    img{
+       max-width: 1400px;
+    }
+}
+.contenedor-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    .card{
+        position: relative;
+        margin: 10px 10px 20px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        img{
+            width: 250px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        span{
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+    .botones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        button{
+
+            all: unset;
+            
+            font-size: 16px;
+            width:fit-content;
+            font-family: "kanit";
+            font-weight: normal;
+            color: #384861;
+            background-color: #58C890;
+           padding: 7px 18px 7px 18px;
+            border-radius: 30px;
+            border-color: #58C890;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        select{
+            width: 250px;
+            height: 30px;
+            color: #384861;
+
+        }
+    }
+}
+.paginado{
+    font-size: 20px;
+    grid-column: span 3;
+    margin: 10px 0 20px 0;
+     span{
+        margin: 7px;
+        cursor: pointer;
+     }
+     span:hover{
+        color: #58C890;
+     }
+     .actual{
+        color: #58C890;
+     }
+}
+.perro-popup{
+    z-index: 5;
+    position: fixed; /* Posición fija en la ventana */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste para centrar */
+
+    background-color: white;
+    font-family: "kanit";
+    border: 1px solid #384861;
+    border-radius: 20px;
+    width: 750px;
+    display: flex;
+    img{
+        height: 400px;
+        margin: 10px;
+        border-radius: 20px;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        color: #384861;
+        padding-left: 20px;
+        
+        width: 100%;
+        margin-top: 10PX;
+        span{
+            margin-bottom: 15px;
+        }
+        .titulo{
+            font-size: 40px;
+            align-self: center;
+            margin-bottom: 20px;
+        }
+        button{
+            
+            all: unset;
+            align-self: center;
+            font-size: 16px;
+            width:fit-content;
+            font-family: "kanit";
+            font-weight: normal;
+            color: #384861;
+            background-color: #58C890;
+           padding: 7px 18px 7px 18px;
+            border-radius: 30px;
+            border-color: #58C890;
+            cursor: pointer;
+            
+            margin: 20px 0 10px 0;
+        }
+    }
+}
+.fondoFalso{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.733); /* Oscurece con transparencia */
+}
+
+.boton-login{
+    all: unset;
+            
+            font-size: 16px;
+            width:fit-content;
+            font-family: "kanit";
+            font-weight: normal;
+            color: #384861;
+            background-color: #ffffff;
+           padding: 7px 18px 7px 18px;
+            border-radius: 30px;
+            border: 2px solid #384861;
+            
+            cursor: pointer;
+            position: absolute;
+            
+            
+}
+.login{
+    z-index: 5;
+    position: fixed; /* Posición fija en la ventana */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste para centrar */
+
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid black;
+    height: 300px;
+    width: 400px;
+    align-items: center;
+    font-family: "kanit";
+    border-radius: 20px;
+    .titulo{
+        font-family: sans-serif;
+        font-size: 40px;
+        color: #384861;
+        margin: 10px 0 30px 0;
+    }
+    label{
+        font-size: 17px;
+        color: #384861;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: px;
+        align-items: center;
+        
+        input{
+            border-radius: 0;
+            border: 1px solid black;
+        }
+        
+        
+        .imagen-input{
+            display: flex;
+            height: 17px;
+            
+        }
+    }
+    button{
+            
+        all: unset;
+        align-self: center;
+        font-size: 16px;
+        width:fit-content;
+        font-family: "kanit";
+        font-weight: 500;
+        color: #384861;
+        background-color: #58C890;
+       padding: 7px 18px 7px 18px;
+        border-radius: 30px;
+        border-color: #58C890;
+        cursor: pointer;
+        
+        margin: 30px 0 10px 0;
+    }
+}
+.img{
+    all: unset;
+    padding: 1px;
+    background-color: #D9D9D9;
+    border: 1px solid black;
+    border-right: unset;
+}
+.actions {
+    position: absolute; /* Posiciona los íconos dentro de la card */
+    top: -10px;
+    left: 240px;
+    display: flex;
+    gap: 5px; /* Espaciado entre los círculos */
+  }
+  
+  /* Estilos comunes para los círculos */
+  .circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #000000;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .imagen-accion{
+    width: 20px;
+    height: 20px;
+  }
+  /* Estilo para el círculo de eliminar */
+  .circle.delete {
+    background-color: #ffffff;
+    
+  }
+  
+  /* Estilo para el círculo de editar */
+  .circle.edit {
+    background-color: white;
+  }
+  
+  /* Hover para los círculos */
+  .circle:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+  }
+  .logueado{
+    padding: 3px 5px 3px 3px;
+    margin: 0;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+  }
+  .img-logueado{
+    border-radius: 50%;
+    padding: 3px;
+    margin: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #58C890;
+  }
+.error-usuario{
+    color: red;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.error{
+    background-color: rgb(255, 50, 50);
+}
+.correcto{
+    background-color: #58C890;
+}
+.desaparecer{
+    display: none !important;
+}
