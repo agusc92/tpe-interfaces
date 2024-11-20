@@ -1,0 +1,69 @@
+.contenedor {
+    position: relative; /* Establece un contexto de posicionamiento para los elementos dentro */
+    width: 100%; /* Ajusta al tamaño que prefieras */
+    max-width: 100vw; /* Opcional, para evitar desbordamientos */
+    overflow: hidden; /* Oculta cualquier contenido fuera del contenedor */
+}
+
+.baner {
+    position: relative; /* Mantiene la relación del texto con el contenedor */
+    display: inline-block;
+    width: 100%;
+}
+
+.baner img {
+    display: block; /* Evita el espacio extra alrededor de la imagen */
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+}
+
+.baner h1 {
+    position: absolute; /* Coloca el texto sobre la imagen */
+    top: 80%; /* Centra verticalmente */
+    left: 20%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar exactamente */
+    color: #384861;
+    font-family: Kanit; /* Fuente utilizada en el proyecto */
+    font-size: 60px; /* Tamaño del texto */
+    font-weight: 500; /* Grosor del texto */
+    text-align: center; /* Alineación centrada */
+    margin: 0; /* Elimina márgenes extra */
+    z-index: 1; /* Asegura que el texto esté sobre la imagen */
+}
+
+
+.nosotros-text{
+
+font-family: Kanit;
+font-size: 20px;
+font-weight: 400;
+line-height: 29.9px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+margin-right: 15px;
+margin-left: 15px;
+}
+
+
+.container{
+
+display: flex;
+
+background: #EEFFF1;
+margin: 15px, opx, 15px, 0px;
+padding: 15px;
+
+
+}
+
+.foto-nosotros{
+width: 446px;
+height: 337px;
+top: 155px;
+left: 28px;
+border-radius: 30px;
+opacity: 0px;
+margin-right: 15px;
+
+}

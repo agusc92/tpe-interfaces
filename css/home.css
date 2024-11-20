@@ -1,0 +1,153 @@
+.carousel {
+    position: relative;
+    width: 100vw; /* Todo el ancho de la ventana */
+    height: 530px; /* Todo el alto de la ventana */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    margin: 0;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%; /* Ocupará todo el espacio disponible */
+    height: 100%; /* Asegura que cubra toda la altura del carrusel */
+    animation: slide 15s infinite;
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Cada imagen ocupa el 100% del carrusel */
+    position: relative;
+    height: 100%; /* Ajusta la altura al carrusel */
+}
+
+.carousel-item img {
+    width: 100%; /* Imagen ocupa todo el ancho del carrusel */
+    height: 100%; /* Imagen ocupa toda la altura del carrusel */
+    object-fit: cover; /* Cubre el contenedor sin distorsión */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10%; /* Ajusta el texto dentro del carrusel */
+    left:10%;
+    
+    text-align:start;
+    color: #384861;
+ 
+}
+
+.carousel-caption h2 {
+   
+    margin-bottom: 5px;
+}
+
+.carousel-caption button {
+    all: unset;
+    background-color: #58C890;
+    color: #384861;
+    padding: 8px 25px 8px;
+    border-radius: 30px;
+    font-family: "Kanit", sans-serif;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.carousel-caption button:hover {
+    background-color: #45a977;
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+    0%, 15% {
+        transform: translateX(0); /* Primera imagen */
+    }
+    25%, 40% {
+        transform: translateX(-100%); /* Segunda imagen */
+    }
+    50%, 65% {
+        transform: translateX(-200%); /* Tercera imagen */
+    }
+    75%, 90% {
+        transform: translateX(-300%); /* Cuarta imagen */
+    }
+    100% {
+        
+        transform: translateX(0); /* Vuelve a la primera imagen */
+            }
+
+
+}
+
+.div-canicross{
+    display: flex;
+    justify-content:space-around;
+    background: #EEFFF1;
+    margin:10px;
+    margin-left: 20px;
+    margin-left: 30px;
+    padding: 10px;
+}
+
+.img-canicross{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 600px;
+
+}
+
+.div-text{
+font-family: "kanit";
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-left: 0px;
+width: 700px;
+
+}
+
+h2{
+font-family:sans-serif;
+font-size: 48px;
+font-weight: 300;
+line-height: 86.72px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+
+span{
+    font-family: Kanit;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29.9px;
+    text-align: left;
+    margin-top: 20px;
+   
+    text-decoration-skip-ink: none;
+    
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.carousel-controls button:hover {
+    opacity: 1;
+}
