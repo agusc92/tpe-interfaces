@@ -1,90 +1,85 @@
+
 .carousel {
+    width: 100%;
+    overflow: hidden; /* Ocultar contenido desbordado */
     position: relative;
-    width: 100vw; /* Todo el ancho de la ventana */
-    height: 530px; /* Todo el alto de la ventana */
-    overflow: hidden; /* Oculta cualquier desbordamiento */
-    margin: 0;
-}
-
-.carousel-slide {
+    height: 505px; /* Ajusta según la altura deseada */
+  }
+  
+  /* Contenedor de las diapositivas */
+  .carousel-container {
     display: flex;
-    width: 100%; /* Ocupará todo el espacio disponible */
-    height: 100%; /* Asegura que cubra toda la altura del carrusel */
-    animation: slide 15s infinite;
-}
-
-.carousel-item {
-    flex: 0 0 100%; /* Cada imagen ocupa el 100% del carrusel */
+    transition: transform 0.5s ease-in-out; /* Animación suave */
+    height: 100%;
+  }
+  
+  /* Diapositiva individual */
+  .slide {
     position: relative;
-    height: 100%; /* Ajusta la altura al carrusel */
-}
-
-.carousel-item img {
-    width: 100%; /* Imagen ocupa todo el ancho del carrusel */
-    height: 100%; /* Imagen ocupa toda la altura del carrusel */
-    object-fit: cover; /* Cubre el contenedor sin distorsión */
-}
-
-.carousel-caption {
+    flex: 0 0 100%; /* Cada slide ocupa el 100% del ancho */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Filtro degradado */
+  .slide .overlay {
     position: absolute;
-    bottom: 10%; /* Ajusta el texto dentro del carrusel */
-    left:10%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(0, 0, 0,0), rgba(255, 255, 255, 1));
+    z-index: 1;
+  }
+  
+  /* Contenido de texto y botón */
+  .content {
+    font-family: "kanit";
+    position: absolute;
+    top:250px;
+    left: 100px;
+    color: #384861;
+    text-align: center;
+    z-index: 2; /* Sobre el filtro */
+  }
+  
+  .content h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
     
-    text-align:start;
-    color: #384861;
- 
-}
-
-.carousel-caption h2 {
-   
-    margin-bottom: 5px;
-}
-
-.carousel-caption button {
+  }
+  
+  .content a {
     all: unset;
-    background-color: #58C890;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    gap: 0px;
+    opacity: 0px;
     color: #384861;
-    padding: 8px 25px 8px;
-    border-radius: 30px;
-    font-family: "Kanit", sans-serif;
-    cursor: pointer;
-    font-weight: 400;
+    background: #58C890;
+    border-radius: 30PX;
+    font-family: Kanit;
     font-size: 25px;
-}
-
-.carousel-caption button:hover {
-    background-color: #45a977;
-}
-
-/* Animación del carrusel */
-@keyframes slide {
-    0%, 15% {
-        transform: translateX(0); /* Primera imagen */
-    }
-    25%, 40% {
-        transform: translateX(-100%); /* Segunda imagen */
-    }
-    50%, 65% {
-        transform: translateX(-200%); /* Tercera imagen */
-    }
-    75%, 90% {
-        transform: translateX(-300%); /* Cuarta imagen */
-    }
-    100% {
-        
-        transform: translateX(0); /* Vuelve a la primera imagen */
-            }
-
-
-}
+    font-weight: 400;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding: 7px 10px 7px 10px;
+    cursor: pointer;
+  }
+  
+  .content button:hover {
+    background-color: #0056b3;
+  }
 
 .div-canicross{
     display: flex;
     justify-content:space-around;
     background: #EEFFF1;
-    margin:10px;
-    margin-left: 20px;
-    margin-left: 30px;
+    margin: 0 100px 0 100px;
     padding: 10px;
 }
 
@@ -100,12 +95,13 @@ font-family: "kanit";
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-left: 0px;
+margin: 0 0 0 30px;
 width: 700px;
 
 }
 
 h2{
+    
 font-family:sans-serif;
 font-size: 48px;
 font-weight: 300;
@@ -116,6 +112,7 @@ text-decoration-skip-ink: none;
 }
 
 span{
+    
     font-family: Kanit;
     font-size: 20px;
     font-weight: 400;
@@ -127,27 +124,40 @@ span{
     
 }
 
-.carousel-controls {
+
+.nav-btn {
     position: absolute;
     top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
     transform: translateY(-50%);
-    z-index: 10;
-}
-
-.carousel-controls button {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Botones semi-transparentes */
     color: white;
-    font-size: 30px;
     border: none;
-    padding: 10px;
+    font-size: 2rem;
     cursor: pointer;
+    padding: 10px;
+    z-index: 3; /* Por encima de las imágenes */
     border-radius: 50%;
-    opacity: 0.6;
-}
-
-.carousel-controls button:hover {
-    opacity: 1;
-}
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev-btn {
+    left: 20px; /* Botón izquierdo */
+  }
+  
+  .next-btn {
+    right: 20px; /* Botón derecho */
+  }
+  .invitacion{
+    font-size: 25px;
+    
+    margin-top: 60px;
+  }

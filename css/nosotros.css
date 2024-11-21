@@ -1,3 +1,14 @@
+.filtro{
+    background: linear-gradient(to bottom,rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) );
+    position: absolute;
+    width: 100%; /* Todo el ancho de la ventana */
+    height: 300px;
+    z-index: 1;
+    /* pointer-events: none; */
+}
+.focus{
+    color: #58C890;
+}
 .contenedor {
     position: relative; /* Establece un contexto de posicionamiento para los elementos dentro */
     width: 100%; /* Ajusta al tamaño que prefieras */
@@ -14,18 +25,17 @@
 .baner img {
     display: block; /* Evita el espacio extra alrededor de la imagen */
     width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-    height: auto; /* Mantiene las proporciones de la imagen */
+    height: 300px; /* Mantiene las proporciones de la imagen */
 }
 
 .baner h1 {
     position: absolute; /* Coloca el texto sobre la imagen */
-    top: 80%; /* Centra verticalmente */
-    left: 20%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta la posición para centrar exactamente */
+    top: 180px; /* Centra verticalmente */
+    left: 100px; /* Centra horizontalmente */
     color: #384861;
-    font-family: Kanit; /* Fuente utilizada en el proyecto */
+    font-family: sans-serif; /* Fuente utilizada en el proyecto */
     font-size: 60px; /* Tamaño del texto */
-    font-weight: 500; /* Grosor del texto */
+    font-weight: 600; /* Grosor del texto */
     text-align: center; /* Alineación centrada */
     margin: 0; /* Elimina márgenes extra */
     z-index: 1; /* Asegura que el texto esté sobre la imagen */
@@ -45,7 +55,9 @@ margin-right: 15px;
 margin-left: 15px;
 }
 
-
+.contenedor-maximo{
+    padding: 0 100px 0 100px;
+}
 .container{
 
 display: flex;

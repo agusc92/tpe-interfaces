@@ -22,21 +22,23 @@
         </div>
         <div class="contenedor-nav">
             <ul>
-                <li><a href="">NOSOTROS</a></li>
-                <li><a href="">ADOPTA</a></li>
-                <li><a href="">DONACIONES</a></li>
-                <li><a href="">PARTICIPA</a></li>
-                <li><button>DONA AHORA</button></li>
+                <li><a href="/home.html">INICIO</a></li>
+                <li ><a href="/nosotros.html" >NOSOTROS</a></li>
+                <li><a href="/conocelos.html" >ADOPTA</a></li>
+                <li><a href="/dona.html">DONACIONES</a></li>
+                <li><a href="/participa.html" class="focus">PARTICIPA</a></li>
+                <li><a id="botonDonar" class="boton-dona" href="/dona.html">DONA AHORA</a></li>
             </ul>
         </div>
     </header>
     <main>
-        <div class="contenedor">
-            <div class="baner">
-                <h1>PARTICIPA</h1>
-                <img src="./imagenes/participa.jpeg" alt="nosotros">
+        <div class="baner">
+            <h1>PARTICIPA</h1>
+            <img src="./imagenes/participa.jpeg" alt="nosotros">
 
-            </div>
+        </div>
+        <div class="contenedor">
+            
 
 
 
@@ -73,12 +75,15 @@
                         class="check"><span><strong>Compromiso a largo
                             plazo:</strong> Buscamos voluntarios comprometidos
                         a largo plazo, ya que la continuidad es crucial.</span></div>
-                <button>POSTULARME</button>
+                <button class="postularme">POSTULARME</button>
             </div>
 
 
         </div>
-        <div>
+        <div class="contenedor">
+            <div class="contenedor-transito">
+                
+            
             <h2>POSTULARME COMO HOGAR DE TRANSITO</h2>
             <p class="check-voluntarios"> Puede que no estés en condiciones de adoptar un perro de manera permanente,
                 pero sí podés ofrecer un
@@ -101,7 +106,7 @@
                             ser flexibles y comprensivos con los
                             cambios en su rutina que pudieran surgir relacionados al cuidado del animal a su
                             cargo.</span></div>
-                    <button>POSTULARME</button>
+                    <button class="postularme">POSTULARME</button>
                 </div>
 
                 <div class="img-transito">
@@ -111,32 +116,15 @@
 
         </div>
 
+        </div>
+
 
         </div>
 
-        <!-- Formulario popup -->
-        <!--
-<div id="popupForm" class="popup hidden">
-    <div class="popup-content">
-        <span id="closePopup" class="close">&times;</span>
-        <h3>POSTULARME COMO</h3>
-        <form id="applicationForm">
-            <label class="option-label">
-                Voluntario <input type="radio" name="role" value="Voluntario" required>
-              
-            </label><br>
-            <label class="option-label">
-                Hogar de Tránsito <input type="radio" name="role" value="Hogar de Tránsito" required>
-                
-            </label><br><br>
-            <label class="option-label" for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-</div>
+        
+        
 
--->
+
 
 
     </main>
@@ -172,6 +160,20 @@
             </ul>
         </div>
     </footer>
+    <div class="perro-popup desaparecer">
+        <img id="imagen" src="" alt="">
+        <div>
+            <span id="nombre" class="titulo">Vitto</span>
+            <span><STrong>Edad:</STrong> <span id="edad"></span></span>
+            <span><STrong>Tamaño:</STrong> <span id="tamanio"></span></span>
+            <span><STrong>Castrado:</STrong> <span id="castrado"></span> </span>
+            <span><STrong>observaciones: </STrong><span id="observaciones"></span></span>
+            <button id="enviar">ENVIAR</button>
+        </div>
+
+    </div>
+    <div id="fondoFalso" class="fondoFalso desaparecer"></div>
+    <script src="/scripts/participa.js"></script>
 </body>
 
 </html>

@@ -3,9 +3,12 @@
     width: 100%;
 }
 .titulo-dona{
+    font-family: "kanit";
     position: absolute;
-    top: 380px;
+    top: 320px; 
     left: 100px;
+    font-size: 60px; 
+    font-weight: 600;
 }
 .intro{
     font-family: "kanit";
@@ -26,13 +29,15 @@
     padding: 20px 50px 0 50px;
 }
 .tipo-donaciones{
+    margin:0 100px 0 100px;
     display: flex;
     justify-content: space-around;
     background-color: #EEFFF1;
-    padding: 50px 200px 50px 200px;
+    padding: 50px 50px 50px 50px;
     
     .mercado-pago{
         img{
+            margin: 30px;
             width: 300px;
             margin-bottom: 50px;
         }
@@ -77,6 +82,9 @@
 
     }
 }
+.titulo{
+    margin-top: 30px;
+}
 .insumos{
     display: flex;
     flex-direction: column;
@@ -87,12 +95,14 @@
     align-self: center;
     margin-top: 20px;
     font-family: "kanit";
-    width: 700px;
+    width: 850px;
     height: fit-content;
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 50px;
 }
 .titulo-insumos{
-    margin-left: 100px;
+    margin:20px 0 0 100px;
+    font-size: 40px;
+    font-weight: 550;
 }
