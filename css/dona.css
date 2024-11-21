@@ -1,3 +1,6 @@
+html{
+    scroll-behavior:smooth;
+}
 .portada{
     height: 300px;
     width: 100%;

@@ -24,10 +24,11 @@
             <ul>
                 <li><a href="/home.html">INICIO</a></li>
                 <li ><a href="/nosotros.html" >NOSOTROS</a></li>
+                <li><a href="/quieroAdoptar.html" >QUIERO ADOPTAR</a></li>
                 <li><a href="/conocelos.html" >ADOPTA</a></li>
                 <li><a href="/dona.html">DONACIONES</a></li>
                 <li><a href="/participa.html" class="focus">PARTICIPA</a></li>
-                <li><a id="botonDonar" class="boton-dona" href="/dona.html">DONA AHORA</a></li>
+                <li><a id="botonDonar" class="boton-dona" href="/dona.html#tipo">DONA AHORA</a></li>
             </ul>
         </div>
     </header>
@@ -89,7 +90,7 @@
                 pero sí podés ofrecer un
                 espacio temporal para un animal en recuperación o brindar un hogar temporal a cachorros hasta que
                 encuentren
-                su hogar definitivo. Tu aporte será esencial en la vida de ese animal.</p>
+                su hogar definitivo.Tu aporte será esencial en la vida de ese animal.</p>
             <div class="contenedor-trans">
                 <div class="contenedor-transito">
                     <p class="check-voluntarios">Lo que se necesita para ser un hogar de transito es:</p>
@@ -160,18 +161,22 @@
             </ul>
         </div>
     </footer>
+
     <div class="perro-popup desaparecer">
-        <img id="imagen" src="" alt="">
-        <div>
-            <span id="nombre" class="titulo">Vitto</span>
-            <span><STrong>Edad:</STrong> <span id="edad"></span></span>
-            <span><STrong>Tamaño:</STrong> <span id="tamanio"></span></span>
-            <span><STrong>Castrado:</STrong> <span id="castrado"></span> </span>
-            <span><STrong>observaciones: </STrong><span id="observaciones"></span></span>
+        <div class="contenedor-campos">
+            <span id="nombre" class="titulo">POSTULARME COMO</span>
+            <div class="campo"><label for="voluntario">Voluntario</label> <input type="radio" name="eleccion" id="voluntario"></div>
+            <div class="campo"><label for="hogar">Hogar de transito</label> <input type="radio" name="eleccion" id="hogar"></div>
+            <span class="error desaparecer" id="errorRadio">Elija una opcion</span>
+            <div class="mail">
+                <span>Deja tu correo</span> 
+                <input type="email" placeholder="email@ejemplo.com" id="mail"></div>
+                <span class="error desaparecer" id="errorMail">Ingrese un mail valido</span>
             <button id="enviar">ENVIAR</button>
         </div>
 
     </div>
+
     <div id="fondoFalso" class="fondoFalso desaparecer"></div>
     <script src="/scripts/participa.js"></script>
 </body>

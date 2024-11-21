@@ -59,16 +59,18 @@ text-decoration-skip-ink: none;
 .contenedor-req{
     display: flex;
     flex-direction: row;
-    
-    
-
 }
 
 
 .img-req{
 border-radius:50%;
-width: 300px;
-height: 350px;
+width: 250px;
+height: 250px;
+
+}
+.contenedor-img-req{
+    padding-top: 80px;
+    padding-left: 20px;
 }
 
 .check{
