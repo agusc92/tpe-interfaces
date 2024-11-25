@@ -1,5 +1,8 @@
 body{
-   all:unset;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
    
 }
 .contenedor{
@@ -7,6 +10,8 @@ body{
     margin: 0 auto;
 }
 .portada{
+    color: #384861;
+    width: 100%;
     span{
         font-family: "kanit";
         position: absolute;
@@ -23,6 +28,7 @@ body{
 .contenedor-cards{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    column-gap: 60px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -104,6 +110,9 @@ body{
     border-radius: 20px;
     width: 750px;
     display: flex;
+
+    visibility: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
     img{
         height: 400px;
         margin: 10px;
@@ -189,6 +198,9 @@ body{
     align-items: center;
     font-family: "kanit";
     border-radius: 20px;
+
+    visibility: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
     .titulo{
         font-family: sans-serif;
         font-size: 40px;
@@ -244,7 +256,7 @@ body{
 .actions {
     position: absolute; /* Posiciona los íconos dentro de la card */
     top: -10px;
-    left: 240px;
+    left: 200px;
     display: flex;
     gap: 5px; /* Espaciado entre los círculos */
   }
@@ -313,11 +325,56 @@ body{
     background-color: #58C890;
 }
 .desaparecer{
-    display: none !important;
+    opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  visibility: hidden !important;
 }
+.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .closing {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8); /* Escala más pequeña */
+    visibility: visible; /* Mantén visible mientras anima */
+  }
 h2{
     margin:30px 0 20px 0px;
     font-size: 40px;
     font-weight: 550;
 }
 
+.boton-navegacion{
+    all: unset;
+    height: 20px;
+    position: fixed; /* Posición fija en la ventana */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste para centrar */
+    img{
+    width: 70px;
+    height: 70px;
+    }
+    cursor: pointer;
+   
+}
+
+.atras{
+    
+    top: 50%; /* Centrado vertical */
+    left: -10%; /* Centrado horizontal */
+}
+
+.adelante{
+    transform: scaleX(-1); /* Invierte horizontalmente
+    top: 50%; /* Centrado vertical */
+    left: 110%; /* Centrado horizontal */
+}
+footer{
+    overflow: hidden;
+}
+header{
+    
+   
+}

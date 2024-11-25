@@ -15,6 +15,9 @@ let errorUsuario = document.getElementById('errorUsuario');
 let errorContrasenia = document.getElementById('errorContrasenia');
 let imagenUsuarioInput = document.getElementById('imagenUsuarioInput');
 let imagencontraseniaInput = document.getElementById('imagencontraseniaInput');
+let adelante = document.getElementById('adelante');
+let atras = document.getElementById('atras');
+let cardActual = 0;
 
 window.addEventListener('resize', posicionarLogin);
 function posicionarLogin(){//posiciona los dos botones de login
@@ -31,6 +34,7 @@ posicionarLogin();
 //funcionalidad boton login
 botonLogin[0].addEventListener('click',()=>{
     formularioLogin.classList.remove('desaparecer');
+    formularioLogin.classList.add('visible');
     fondoFalso.classList.remove('desaparecer');
 })
 
@@ -72,10 +76,13 @@ botonCerrarLogin.addEventListener('click',()=>{
 
 botonCerrar.addEventListener('click',()=>{
     perroPopup.classList.add('desaparecer')
+    perroPopup.classList.remove('visible')
     fondoFalso.classList.add('desaparecer')
 })
 fondoFalso.addEventListener('click',()=>{
     perroPopup.classList.add('desaparecer');
+    perroPopup.classList.remove('visible');
+    formularioLogin.classList.remove('visible');
     fondoFalso.classList.add('desaparecer');
     formularioLogin.classList.add('desaparecer');
 })
@@ -84,14 +91,10 @@ fondoFalso.addEventListener('click',()=>{
 cards.forEach((card)=>{
     card.addEventListener('click',()=>{
         perroPopup.classList.remove('desaparecer');
+        perroPopup.classList.add('visible');
         fondoFalso.classList.remove('desaparecer');
-
-        document.getElementById('nombre').innerText = card.dataset.nombre;
-        document.getElementById('edad').innerText = card.dataset.edad;
-        document.getElementById('tamanio').innerText = card.dataset.tamanio;
-        document.getElementById('castrado').innerText = card.dataset.castrado;
-        document.getElementById('observaciones').innerText = card.dataset.observaciones;
-        document.getElementById('imagen').src = card.dataset.imagen;
+        cardActual = cards.indexOf(card) ;
+        rellenarPopup(card);
         
     })
 })
@@ -107,3 +110,29 @@ function loguear(){
     botonLogin[1].classList.remove('desaparecer');//boton con la imagen de usuario
 
 }
+
+function rellenarPopup(card){
+    document.getElementById('nombre').innerText = card.dataset.nombre;
+        document.getElementById('edad').innerText = card.dataset.edad;
+        document.getElementById('tamanio').innerText = card.dataset.tamanio;
+        document.getElementById('castrado').innerText = card.dataset.castrado;
+        document.getElementById('observaciones').innerText = card.dataset.observaciones;
+        document.getElementById('imagen').src = card.dataset.imagen;
+}
+
+adelante.addEventListener('click',()=>{
+    if(cardActual == cards.length-1){
+        cardActual = -1;
+    }
+    cardActual++;
+   rellenarPopup(cards[cardActual]);
+    
+    
+})
+atras.addEventListener('click',()=>{
+    if(cardActual == 0){
+        cardActual = cards.length;
+    }
+    cardActual--;
+    rellenarPopup(cards[cardActual]);
+})

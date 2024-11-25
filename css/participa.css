@@ -282,3 +282,6 @@ font-weight: 500;
 .desaparecer{
     display: none !important;
 }
+.contenedor-maximo{
+    max-width: 1400px;
+}

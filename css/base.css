@@ -4,12 +4,13 @@ body{
    padding: 0;
    display: flex;
    flex-direction: column;
+   align-items: center;
    
 }
 /* color gris #384861 */
 /* color verde fuerte #58C890 */
 main{
-   
+  
     div{
         color: #384861;
         font-size: 40px;
@@ -19,11 +20,13 @@ main{
 }
 
 header{
-    max-width: 1400px;
+   box-sizing: border-box;
     display: flex;
     align-items: end;
     justify-content: space-between;
     padding: 7px 100px 2px 100px;
+    width: 1400px;
+    align-self: center;
     img{
         border-radius: 50%;
         width: 130px;
@@ -88,19 +91,21 @@ header{
     }   
 }
 
-main{
-    max-width: 1400px;
-
-}
 
 footer{
+    width: 100%;
+    background-color: #58C890;
+}
+.contenedor-footer{
+    box-sizing: border-box;
     margin-top: 20px;
     font-family: "kanit";
     padding: 15px 100px 0 100px;
     padding-bottom: 15px;
-    max-width: 1400px;
+    justify-self: center;
     background-color: #58C890;
     color: #384861;
+    width: 1400px;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -171,6 +176,7 @@ footer{
         justify-content: center;
     }
 }
+
 
 
 

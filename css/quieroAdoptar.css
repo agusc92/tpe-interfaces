@@ -1,8 +1,7 @@
 .contenedor {
     position: relative; /* Establece un contexto de posicionamiento para los elementos dentro */
-    width: 100%; /* Ajusta al tamaño que prefieras */
-    /* max-width: 100vw;  */
-    /* overflow: hidden; Oculta cualquier contenido fuera del contenedor */
+    width: 1400px; /* Ajusta al tamaño que prefieras */
+  
     padding: 0 100px 0 100px;
     box-sizing: border-box;
 }
