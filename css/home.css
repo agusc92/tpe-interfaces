@@ -1,5 +1,6 @@
 html{
   scroll-behavior: smooth;
+  
 }
 .carousel {
     width: 100%;
@@ -13,15 +14,24 @@ html{
     display: flex;
     transition: transform 0.5s ease-in-out; /* Animación suave */
     height: 100%;
+    width: 100%;
   }
   
   /* Diapositiva individual */
   .slide {
     position: relative;
     flex: 0 0 100%; /* Cada slide ocupa el 100% del ancho */
-    height: 100%;
-    background-size: cover;
+    
+    height: 100%; /* Ocupa el 100% del alto del contenedor */
+    
+    background-size:cover;
     background-position: center;
+
+
+  
+  
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  flex-shrink: 0; /* Evita que se comprima en un carrusel de slides */
   }
   
   /* Filtro degradado */
@@ -163,3 +173,57 @@ span{
     
     margin-top: 60px;
   }
+
+  @media(max-width:750px){
+    header{
+      width: 100%;
+      
+      img{
+          
+          
+      }
+      ul{
+         
+          flex-direction: column;
+          li{
+              
+              
+              a{
+                
+              }
+              .focus{
+                  
+              }
+              a:hover{
+                 
+              }
+          }
+          .boton-dona{
+              
+          .boton-dona:hover{
+              
+          }
+      }
+      .contenedor-logo{
+          
+      }
+      .contenedor-nav{
+          
+      }   
+  }
+  }
+  .contenedor-footer{
+    flex-direction: column;
+    width: 100vw;
+  }
+  footer{
+    width: 100vw;
+  }
+  .div-canicross{
+    width: 100vw;
+    flex-direction: column;
+  }
+  .div-text{
+    width: 100vw;
+  }
+}

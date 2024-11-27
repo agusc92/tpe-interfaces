@@ -21,6 +21,7 @@
     position: relative; /* Mantiene la relación del texto con el contenedor */
     display: inline-block;
     width: 100%;
+    
 }
 
 .baner img {
@@ -34,7 +35,7 @@
     top: 180px; /* Centra verticalmente */
     left: 100px; /* Centra horizontalmente */
     color: #384861;
-    font-family: sans-serif; /* Fuente utilizada en el proyecto */
+    font-family: kanit; /* Fuente utilizada en el proyecto */
     font-size: 60px; /* Tamaño del texto */
     font-weight: 600; /* Grosor del texto */
     text-align: center; /* Alineación centrada */
