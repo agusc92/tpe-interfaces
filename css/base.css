@@ -24,8 +24,8 @@ header{
     display: flex;
     align-items: end;
     justify-content: space-between;
-    padding: 7px 100px 2px 100px;
-    width: 1400px;
+    /* padding: 7px 100px 2px 100px; */
+    max-width: 1400px;
     align-self: center;
     box-sizing: border-box;
     img{
@@ -97,6 +97,7 @@ footer{
     margin-top: 20px;
     width: 100%;
     background-color: #58C890;
+    overflow: hidden;
 }
 .contenedor-footer{
     box-sizing: border-box;

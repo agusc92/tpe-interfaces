@@ -91,8 +91,9 @@ html{
     display: flex;
     justify-content:space-around;
     background: #EEFFF1;
-    margin: 0 100px 0 100px;
+    
     padding: 10px;
+    
 }
 
 .img-canicross{
