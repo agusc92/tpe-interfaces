@@ -18,13 +18,17 @@ let imagencontraseniaInput = document.getElementById('imagencontraseniaInput');
 let adelante = document.getElementById('adelante');
 let atras = document.getElementById('atras');
 let cardActual = 0;
+let botonCerrarSesion = document.getElementById("botonCerrarSesion");
 
 window.addEventListener('resize', posicionarLogin);
 function posicionarLogin(){//posiciona los dos botones de login
     let pos = botonDonar.getBoundingClientRect();
     botonLogin.forEach(boton=>{
-        boton.style.left = `${pos.left}px`
+        boton.style.left = `${pos.left }px`
         boton.style.top = `${pos.top -65}px`
+        botonCerrarSesion.style.top = `${pos.top -60}px`
+        botonCerrarSesion.style.left = `${pos.left +50}px`
+
     })
     
     
@@ -102,6 +106,8 @@ cards.forEach((card)=>{
 function loguear(){
     let acciones = [...document.querySelectorAll('.actions')]
     let botonAgregar = document.getElementById('botonAgregar');
+    let botonCerrarSesion = document.getElementById("botonCerrarSesion");
+    botonCerrarSesion.classList.remove('desaparecer');
     botonAgregar.classList.remove('desaparecer');
     acciones.forEach(accion=>{
         accion.classList.remove('desaparecer');
@@ -136,3 +142,33 @@ atras.addEventListener('click',()=>{
     cardActual--;
     rellenarPopup(cards[cardActual]);
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+    const botonCerrarSesion = document.getElementById("botonCerrarSesion");
+    const modalCerrarSesion = document.getElementById("modalCerrarSesion");
+    const aceptarCerrarSesion = document.getElementById("aceptarCerrarSesion");
+    const cancelarCerrarSesion = document.getElementById("cancelarCerrarSesion");
+
+    // Abrir el modal al hacer clic en el botón
+    botonCerrarSesion.addEventListener("click", () => {
+        modalCerrarSesion.classList.remove("desaparecer");
+    });
+
+    // Confirmar cierre de sesión
+    aceptarCerrarSesion.addEventListener("click", () => {
+        modalCerrarSesion.classList.add("desaparecer");
+       
+    });
+
+    // Cancelar cierre de sesión
+    cancelarCerrarSesion.addEventListener("click", () => {
+        modalCerrarSesion.classList.add("desaparecer");
+    });
+
+    // Cerrar el modal al hacer clic fuera de él
+    window.addEventListener("click", (e) => {
+        if (e.target === modalCerrarSesion) {
+            modalCerrarSesion.classList.add("desaparecer");
+        }
+    });
+});

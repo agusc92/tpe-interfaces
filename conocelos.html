@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CAAN</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/conocelos.css">
     <!-- fuente kanit -->
@@ -12,6 +12,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+    
+    <div id="modalCerrarSesion" class="modal desaparecer">
+        <div class="modal-contenido">
+            <p>¿Estás seguro de que deseas cerrar sesión?</p>
+            <button id="aceptarCerrarSesion" class="btn-confirmar"><a class="aceptar" href="conocelos.html">Aceptar</a></button>
+            <button id="cancelarCerrarSesion" class="btn-cancelar">Cancelar</button>
+        </div>
+    </div>
+    
     <div class="login desaparecer">
         <span class="titulo">Iniciar sesion</span>
         <label for="usuario">
@@ -21,7 +31,7 @@
         <span class="error-usuario" id="errorUsuario"></span>      
         <label for="contrasenia">
             <span>Contraseña</span>
-             <span class="imagen-input"><img src="./imagenes/candado.png" alt="" id="imagencontraseniaInput" class="img"><input type="text" id="contrasenia" placeholder="Contraseña"></span>
+             <span class="imagen-input"><img src="./imagenes/candado.png" alt="" id="imagencontraseniaInput" class="img"><input type="password" id="contrasenia" placeholder="Contraseña"></span>
              
         </label>
         <span class="error-usuario" id="errorContrasenia"></span> 
@@ -29,9 +39,12 @@
     </div>
     <button class="boton-login " id="boton-ingresar">INGRESAR</button>
     <button class="boton-login logueado desaparecer" id="boton-ingresado"><img src="./imagenes/usuario.png" class="img-logueado" alt=""><span>Agustin</span></button>
+    <button id="botonCerrarSesion" class="boton-cerrar-sesion desaparecer"><img src="./imagenes/salir.png" alt="Cerrar sesión"></button>
+    
+    
     <header>
         <div class="contenedor-logo">
-            <img  src="./imagenes/logo.jpg" alt="logo">
+            <a href="home.html"><img  src="./imagenes/logo.jpg" alt="logo"></a>
         </div>
         <div class="contenedor-nav">
             <ul>
@@ -61,7 +74,7 @@
                 
                 <div></div>
                 <div class="botones">
-                    <button class="desaparecer" id="botonAgregar">Agregar</button>
+                    <button class="desaparecer" id="botonAgregar">AGREGAR</button>
                     <select name="" id="">
                         <option value="" disabled selected>Buscar por edad</option>
                         <option value="1">Cachorro</option>
